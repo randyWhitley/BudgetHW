@@ -17,14 +17,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const MONGODB_URI =
-  "db url";
-
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(MONGODB_URI, "mongodb://localhost/budget"  {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
-
 // routes
 app.use(require("./routes/api.js"));
 
